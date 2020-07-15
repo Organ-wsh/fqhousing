@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script type="text/javascript">
+  function serchache() {
+     /*$.ajax({
+        type:get
+        url:
+     })*/
+  }
+</script>
+
+<body>
+<H1 type="center"> 用户列表</H1>
+<table border="1">
+    <tr>
+        <td>真实姓名</td>
+        <td>用户密码</td>
+        <td>性别</td>
+        <td>昵称</td>
+    </tr>
+    <tr th:each="user:${userList}">
+      <td th:text="${user.username}"></td>
+      <td th:text="${user.password}"></td>
+      <td th:if="${user.sex==1}">男</td>
+      <td th:if="${user.sex==0}">女</td>
+      <td th:text="${user.nickName}"></td>
+    </tr>
+
+</table>
+<input type="button" value="查询" onclick="serchache()">
+</body>
+</html>
