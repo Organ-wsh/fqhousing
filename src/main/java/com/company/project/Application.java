@@ -8,6 +8,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @EnableCaching
 public class Application {
     public static void main(String[] args) {
+        System.out.println("测试主分支push");
         SpringApplication.run(Application.class, args);
     }
 }
